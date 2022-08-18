@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/6d8ca2990c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <section class="grid grid-cols-4 w-4/6 mx-auto mt-20 ">
+            <div class="col-span-4 bg-slate-500	text-right p-10 border-2 border-violet-400 h-50">
+                <h2 id="screen" class="text-xl text-white">0</h2>
+                <h1 id="result" class="text-5xl text-white">0</h1>
+            </div>
+            <div id="operator-plus" class="p-10 text-center text-2xl border font-medium bg-slate-100 hover:bg-slate-300"
+                onclick="addValue('+')">+</div>
+            <div id="operator-minus"
+                class="p-10 text-center text-2xl border font-medium bg-slate-100 hover:bg-slate-300"
+                onclick="addValue('-')">-</div>
+            <div id="operator-multiply"
+                class="p-10 text-center text-2xl border font-medium bg-slate-100 hover:bg-slate-300"
+                onclick="addValue('*')">*</div>
+            <div id="operator-division"
+                class="p-10 text-center text-2xl border font-medium bg-slate-100 hover:bg-slate-300"
+                onclick="addValue('/')">/</div>
+            <div id="digit-seven" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('7')">7</div>
+            <div id="digit-eight" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('8')">8</div>
+            <div id="digit-nine" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('9')">9</div>
+            <div id="digit-nine" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="eraseCharacter()"><i class="fa-solid fa-delete-left"></i>
+            </div>
+
+            <div id="digit-four" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('4')">4</div>
+            <div id="digit-five" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('5')">5</div>
+            <div id="digit-six" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('6')">6</div>
+            <div id="operator-equal"
+                class="p-10 text-center text-2xl border font-medium row-span-2 pt-20 bg-amber-100 hover:bg-amber-300"
+                onclick="getResult()"><i class="fa-solid fa-equals"></i>
+            </div>
+            <div id="digit-one" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('1')">1</div>
+            <div id="digit-two" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('2')">2</div>
+            <div id="digit-three" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('3')">3</div>
+            <div id="digit-zero" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('0')">0</div>
+            <div id="point" class="p-10 text-center text-2xl border font-medium hover:bg-yellow-100"
+                onclick="addValue('.')">.</div>
+            <div id="modulo" class="p-10 text-center text-2xl border font-medium bg-slate-100 hover:bg-slate-300"
+                onclick="addValue('%')">%
+            </div>
+            <div id="reset" class="p-10 text-center text-2xl border font-medium hover:bg-teal-300"
+                onclick="clearScreen()">AC</div>
+        </section>
+    </main>
+    <script src="js/logic.js"></script>
+</body>
+
+</html>
